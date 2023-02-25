@@ -1,0 +1,13 @@
+option solver cplexamp;
+
+option cplex_options 'timing=2 mipdisplay=3 mipgap=0 timelimit=1200';
+
+model modelo2.txt;
+
+data dados-q=3.txt;
+
+solve;
+
+display x, y;
+
+end;
